@@ -1,0 +1,9 @@
+__pycache__/
+angle_acs/
+mpnet_acs/
+simcse_acs/
+llm_labeling/
+baseline_models/
+*.csv
+web_survey_*
+*.sh
