@@ -5,11 +5,19 @@ This is the repo for the paper: [**Crafting Large Language Models for Enhanced I
   <img src="./fig/cbllm.png" width="80%" height="80%" />
 </p>
 
+## Setup
+Recommend using cuda12.1, python3.10, pytorch2.2.
+
+Install the packages:
+```
+pip install -r requirements.txt
+```
+
 ## Training
 ### Automatic Concept Scoring (ACS)
 To generate the concept scores by our ACS strategy, run
 ```
-python get_concept_label.py
+python get_concept_labels.py
 ```
 This will generate the concept scores for the SST2 dataset using our predefined concept set, and store the scores under `mpnet_acs/SetFit_sst2/`.
 Set the argument `--dataset yelp_polarity`, `--dataset ag_news`, or `--dataset dbpedia_14` to switch the dataset.
