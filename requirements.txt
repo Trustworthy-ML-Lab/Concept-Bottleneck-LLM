@@ -3,3 +3,4 @@ transformers==4.44.0
 datasets==3.0.2
 peft==0.13.2
 glm_saga==0.1.2
+evaluate==0.4.0
