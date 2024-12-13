@@ -1,4 +1,9 @@
 # Crafting Large Language Models for Enhanced Interpretability
+**[Update: 12/12/2024]** 
+* The preliminary work in this repo only focused on building interpretable LLMs for text-classification task. We have recently generalized and expanded the scope of this preliminary work further to the text-generation task, an essential capabilitiy for modern LLMs.
+* Please see our new paper [**Concept Bottleneck Large Language Models**](https://arxiv.org/pdf/2412.07992) and [**new github repo**](https://github.com/Trustworthy-ML-Lab/CB-LLMs) on how to design interpretable LLMs with concept bottlenecks for both text generation and text classification tasks.   
+
+---
 This is the repo for the paper: [**Crafting Large Language Models for Enhanced Interpretability**](https://arxiv.org/abs/2407.04307). We proposed Concept Bottleneck Large Language Model (CB-LLM), a pioneering approach to creating inherently interpretable Large Language Models (LLMs). CB-LLM sets a new standard with its high accuracy, scalability, and ability to provide clear, accurate explanations.
 
 <p align="center">
