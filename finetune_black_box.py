@@ -189,12 +189,12 @@ if __name__ == "__main__":
                 print("save model")
                 best_loss = avg_val_loss
                 if args.tune_mlp_only:
-                    torch.save(mlp.state_dict(), prefix + "mlp_finetuned_" + d_name + "_epoch_" + str(e + 1) + ".pt")
+                    torch.save(mlp.state_dict(), prefix + "mlp_finetuned_" + d_name + ".pt")
                 else:
-                    torch.save(LM.state_dict(), prefix + "backbone_finetuned_" + d_name + "_epoch_" + str(e + 1) + ".pt")
+                    torch.save(LM.state_dict(), prefix + "backbone_finetuned_" + d_name + ".pt")
         else:
             print("save model")
             if args.tune_mlp_only:
-                torch.save(mlp.state_dict(), prefix + "mlp_finetuned_" + d_name + "_epoch_" + str(e + 1) + ".pt")
+                torch.save(mlp.state_dict(), prefix + "mlp_finetuned_" + d_name + ".pt")
             else:
-                torch.save(LM.state_dict(), prefix + "backbone_finetuned_" + d_name + "_epoch_" + str(e + 1) + ".pt")
+                torch.save(LM.state_dict(), prefix + "backbone_finetuned_" + d_name + ".pt")

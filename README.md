@@ -40,8 +40,8 @@ To train the final predictor, run
 ```
 python train_FL.py --cbl_path mpnet_acs/SetFit_sst2/roberta_cbm/cbl_acc.pt
 ```
-This will train the linear predictor of the CBL for the SST2 dataset, and store the linear layer in the same directory.
-Please change the argument `--cbl_path` accordingly if using other settings.
+This will train the linear predictor of the CBL for the SST2 dataset, and store the linear layer in the same directory (both sparse and dense layer).
+Please change the argument `--cbl_path` accordingly if using other settings. For example, w/o Automatic Concept Correction will be save as `cbl.pt`.
 ### Train the baseline black-box model
 To train the baseline standard black-box model, run
 ```
@@ -56,7 +56,7 @@ To test the accuracy of the CB-LLM, run
 ```
 python test_CBLLM.py --cbl_path mpnet_acs/SetFit_sst2/roberta_cbm/cbl_acc.pt
 ```
-Please change the argument `--cbl_path` accordingly if using other settings.
+Please change the argument `--cbl_path` accordingly if using other settings.  For example, w/o Automatic Concept Correction will be save as `cbl.pt`. Add the `--sparse` argument for testing with the sparse final layer.
 ### Generate explanations from CB-LLM
 To visualize the neurons in CB-LLM (task 1 in our paper), run
 ```

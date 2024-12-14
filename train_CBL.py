@@ -272,15 +272,15 @@ if __name__ == "__main__":
                 print("save model")
                 best_loss = avg_val_loss
                 if args.tune_cbl_only:
-                    torch.save(cbl.state_dict(), prefix + model_name + "_epoch_" + str(e + 1) + ".pt")
+                    torch.save(cbl.state_dict(), prefix + model_name + ".pt")
                 else:
-                    torch.save(backbone_cbl.state_dict(), prefix + model_name + "_epoch_" + str(e + 1) + ".pt")
+                    torch.save(backbone_cbl.state_dict(), prefix + model_name + ".pt")
         else:
             print("save model")
             if args.tune_cbl_only:
-                torch.save(cbl.state_dict(), prefix + model_name + "_epoch_" + str(e + 1) + ".pt")
+                torch.save(cbl.state_dict(), prefix + model_name + ".pt")
             else:
-                torch.save(backbone_cbl.state_dict(), prefix + model_name + "_epoch_" + str(e + 1) + ".pt")
+                torch.save(backbone_cbl.state_dict(), prefix + model_name + ".pt")
 
     end = time.time()
     print("time of training CBL:", (end - start) / 3600, "hours")
