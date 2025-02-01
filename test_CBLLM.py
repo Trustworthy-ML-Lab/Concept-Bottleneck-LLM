@@ -60,11 +60,11 @@ if __name__ == "__main__":
     else:
         raise Exception("backbone should be roberta or gpt2")
 
-    encoded_test_dataset = test_dataset.map(lambda e: tokenizer(e[CFG.example_name[args.dataset]], padding=True, truncation=True, max_length=args.max_length), batched=True, batch_size=len(test_dataset))
-    encoded_test_dataset = encoded_test_dataset.remove_columns([CFG.example_name[args.dataset]])
-    if args.dataset == 'SetFit/sst2':
+    encoded_test_dataset = test_dataset.map(lambda e: tokenizer(e[CFG.example_name[dataset]], padding=True, truncation=True, max_length=args.max_length), batched=True, batch_size=len(test_dataset))
+    encoded_test_dataset = encoded_test_dataset.remove_columns([CFG.example_name[dataset]])
+    if dataset == 'SetFit/sst2':
         encoded_test_dataset = encoded_test_dataset.remove_columns(['label_text'])
-    if args.dataset == 'dbpedia_14':
+    if dataset == 'dbpedia_14':
         encoded_test_dataset = encoded_test_dataset.remove_columns(['title'])
     encoded_test_dataset = encoded_test_dataset[:len(encoded_test_dataset)]
 
@@ -72,7 +72,7 @@ if __name__ == "__main__":
     test_loader = build_loaders(encoded_test_dataset, mode="test")
 
 
-    concept_set = CFG.concept_set[args.dataset]
+    concept_set = CFG.concept_set[dataset]
     if 'roberta' in backbone:
         if 'no_backbone' in cbl_name:
             print("preparing CBL only...")
