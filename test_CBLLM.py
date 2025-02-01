@@ -49,7 +49,7 @@ if __name__ == "__main__":
     cbl_name = args.cbl_path.split("/")[-1]
     
     print("loading data...")
-    test_dataset = load_dataset(args.dataset, split='test')
+    test_dataset = load_dataset(dataset, split='test')
     print("test data len: ", len(test_dataset))
     print("tokenizing...")
     if 'roberta' in backbone:
