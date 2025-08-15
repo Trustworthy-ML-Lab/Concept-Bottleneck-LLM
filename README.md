@@ -83,8 +83,9 @@ Chung-En Sun, Tuomas Oikarinen, Tsui-Wei Weng. "Crafting Large Language Models f
 ```
 @article{cbllm,
    title={Crafting Large Language Models for Enhanced Interpretability},
-   author={Chung-En Sun, Tuomas Oikarinen, Tsui-Wei Weng},
+   author={Sun, Chung-En and Oikarinen, Tuomas and Weng, Tsui-Wei},
    journal={ICML MI Workshop 2024},
    year={2024}
 }
+
 ```
